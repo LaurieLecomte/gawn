@@ -20,6 +20,7 @@ gunzip GCF_905237065.1_Ssal_v3.1_rna.fna.gz
 ```
 
 2. Downloaded and compile swissprot database
+
 (still in `03_data`)
 
 ```
@@ -29,12 +30,13 @@ makeblastdb -in uniprot_sprot.fasta -out swissprot -dbtype prot
 ```
 
 3. Edited `02_infos/gawn_config.sh`
+
 NCPUS=8
 GENOME_NAME="genome.fasta"
 TRANSCRIPTOME_NAME="GCF_905237065.1_Ssal_v3.1_rna.fna" 
-
 SWISSPROT_DB="03_data/uniprot_sprot"
 
 
 4. Launched the pipeline (from `gawn`)
+
 `srun -p medium -c 8 --mem=20G --time=7-00:00:00 -J gawn ./gawn 02_infos/gawn_config.sh &`
