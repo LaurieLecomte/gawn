@@ -31,11 +31,12 @@ makeblastdb -in uniprot_sprot.fasta -out swissprot -dbtype prot
 
 3. Edited `02_infos/gawn_config.sh`
 
+```
 NCPUS=8
 GENOME_NAME="genome.fasta"
 TRANSCRIPTOME_NAME="GCF_905237065.1_Ssal_v3.1_rna.fna" 
 SWISSPROT_DB="03_data/uniprot_sprot"
-
+```
 
 4. Launched the pipeline (from `gawn`)
 
