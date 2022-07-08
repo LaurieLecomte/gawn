@@ -19,14 +19,16 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/237/065/GCF_905237065.1_Ss
 gunzip GCF_905237065.1_Ssal_v3.1_rna.fna.gz
 ```
 
-2. Downloaded and compile swissprot database
-
-(still in `03_data`)
+2. Downloaded and compiled swissprot database (still in `03_data`)
+(ftp://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz)
 
 ```
-wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz` 
-gunzip uniprot_sprot.fasta.gz
-makeblastdb -in uniprot_sprot.fasta -out swissprot -dbtype prot
+#wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz` #WRONG
+#gunzip uniprot_sprot.fasta.gz                                                                                   #WRONG
+#makeblastdb -in uniprot_sprot.fasta -out swissprot -dbtype prot                                                 #WRONG
+
+ftp://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz
+tar -zxvf swissprot.tar.gz
 ```
 
 3. Edited `02_infos/gawn_config.sh`
